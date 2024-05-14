@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de multiplicação</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/65bfbf4940.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main-home" id="mainHome">
+        <div class="home-content">
+            <div class="title-content">
+                <h1 class="title">Quiz de multiplicação</h1>
+            </div>
+            <div class="button-play-content">
+                <button class="button-play" id="buttonPlay">
+                    <i class="fa-solid fa-play"></i> Jogar
+                </button>
+            </div>
+        </div>
+    </main>
+    <main class="main-game" id="mainGame">
+        <div class="heart-content">
+            <i class="fa-solid fa-heart heart" id="heart1"> </i><i class="fa-solid fa-heart heart" id="heart2"> </i><i class="fa-solid fa-heart heart" id="heart3"></i>
+        </div>
+        <span id="spanQuest">
+
+        </span>
+        <div class="punctuation">
+                Perguntas acertadas: <span id="punctuationSpan">0</span>    
+        </div>
+        <div class="end-game-content" id="endGame">
+            <div class="end-game">
+                <div class="you-lose">
+                    Você perdeu!
+                </div>
+                <div class="end-punctuation">
+                    Você acertou:<br> 
+                    <span id="endPunctuation"></span>
+                </div>
+            </div>
+        </div>
+        <div class="block-click" id="blockClick"></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

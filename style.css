@@ -1,0 +1,258 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.main-home {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(212, 145, 21), rgb(201, 219, 41), rgb(179, 197, 13), rgb(167, 111, 8));
+    overflow: hidden;
+}
+.home-content {
+    backdrop-filter: blur(12px);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    flex-direction: column;
+}
+.title-content {
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    text-align: center;
+}
+.title {
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 5px 5px 10px black;
+    font-size: 70px;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.button-play-content {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+}
+.button-play {
+    width: fit-content;
+    height: fit-content;
+    padding: 2px 35px;
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px black;
+    background-color: white;
+    transition: 0.7s;
+}
+.button-play:hover {
+    background-color: rgb(30, 151, 221);
+    transition: 0.7s;
+}
+.main-game {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgb(212, 145, 21), rgb(201, 219, 41), rgb(179, 197, 13), rgb(167, 111, 8));
+}
+.quiz-content {
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.quest {
+    width: 250px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.button-response-content {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.button-response-div {
+    margin: 10px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.letter {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    margin-right: 10px;
+    transition: 0.7s;
+}
+.button-response {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    font-size: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.button-response-div:hover .letter {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.7s;
+}
+.heart-content {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}
+.heart {
+    font-size: 30px;
+    color: red;
+    margin: 0px 10px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 2px 2px 2px black;
+    transition: 0.7s;
+}
+.punctuation {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.end-game-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+.end-game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    animation: anim-lose-game 2s ease;
+}
+.you-lose {
+    font-size: 70px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(231, 29, 29);
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    text-shadow: 4px 4px 2px black;
+    text-align: center;
+}
+.end-punctuation {
+    font-size: 50px;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 2px;
+    text-align: center;
+}
+.block-click {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+@keyframes anim-heart-lose {
+    0% {
+        color: rgb(255, 0, 0);
+        transform: scale(1, 1);
+    }
+    50% {
+        color: rgb(114, 37, 37);
+        transform: scale(1.4, 1.4);
+    }
+    100%{
+        color: rgb(49, 49, 49);
+        transform: scale(1, 1);
+    }
+}
+@keyframes anim-erro-quest {
+    0% {
+        background-color: rgb(170, 144, 144);
+    }
+    50% {
+        background-color: brown;
+    }
+    100% {
+        background-color: white;
+    }
+}
+@keyframes anim-right-quest {
+    0% {
+        background-color: rgb(144, 170, 151);
+    }
+    50% {
+        background-color: rgb(21, 151, 86);
+    }
+    100% {
+        background-color: white;
+    }
+}
+@keyframes anim-lose-game {
+    from {
+        transform: translateY(300px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
